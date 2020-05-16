@@ -27216,6 +27216,13 @@ export const AddStar = gql`
   }
 }
     `;
+export const GetRepoId = gql`
+    query GetRepoId($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    id
+  }
+}
+    `;
 export const WhoAmI = gql`
     query WhoAmI {
   viewer {
@@ -27251,6 +27258,20 @@ export type AddStarMutation = (
         & Pick<StargazerConnection, 'totalCount'>
       ) }
     )> }
+  )> }
+);
+
+export type GetRepoIdQueryVariables = {
+  owner: Scalars['String'];
+  name: Scalars['String'];
+};
+
+
+export type GetRepoIdQuery = (
+  { __typename?: 'Query' }
+  & { repository?: Maybe<(
+    { __typename?: 'Repository' }
+    & Pick<Repository, 'id'>
   )> }
 );
 
