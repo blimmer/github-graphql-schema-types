@@ -4,7 +4,8 @@
   "description": "Generated types for use with Github's GraphQL Schema",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,15 @@
   },
   "homepage": "https://github.com/blimmer/github-graphql-schema-types#readme",
   "devDependencies": {
+    "@graphql-codegen/cli": "1.13.5",
+    "@octokit/graphql-schema": "^8.3.1",
     "ts-node": "^8.10.1",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.2",
+    "@graphql-codegen/typescript": "1.13.5",
+    "@graphql-codegen/typescript-resolvers": "1.13.5",
+    "@graphql-codegen/typescript-document-nodes": "1.13.5"
+  },
+  "dependencies": {
+    "graphql": "^15.0.0"
   }
 }
