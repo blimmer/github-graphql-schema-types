@@ -1,10 +1,11 @@
 {
   "name": "github-graphql-schema-types",
-  "version": "0.0.1-alpha.1",
-  "description": "Generated types for use with Github's GraphQL Schema",
+  "version": "1.0.0",
+  "description": "Example of generated types for use with Github's GraphQL Schema",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "demo": "ts-node src/index.ts",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,22 @@
   },
   "homepage": "https://github.com/blimmer/github-graphql-schema-types#readme",
   "devDependencies": {
+    "@graphql-codegen/cli": "1.13.5",
+    "@graphql-codegen/typescript": "1.13.5",
+    "@graphql-codegen/typescript-document-nodes": "1.13.5",
+    "@graphql-codegen/typescript-operations": "^1.13.5",
+    "@graphql-codegen/typescript-resolvers": "1.13.5",
+    "@octokit/graphql-schema": "^8.3.1",
+    "@types/node": "^12.12.39",
+    "prettier": "^2.0.5",
     "ts-node": "^8.10.1",
     "typescript": "^3.9.2"
+  },
+  "dependencies": {
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-client": "^2.6.10",
+    "apollo-link-http": "^1.5.17",
+    "cross-fetch": "^3.0.4",
+    "graphql": "^14.6.0"
   }
 }
