@@ -27204,3 +27204,21 @@ export type Resolvers<ContextType = any> = {
  */
 export type IResolvers<ContextType = any> = Resolvers<ContextType>;
 
+
+export const WhoAmI = gql`
+    query WhoAmI {
+  viewer {
+    login
+  }
+}
+    `;
+export type WhoAmIQueryVariables = {};
+
+
+export type WhoAmIQuery = (
+  { __typename?: 'Query' }
+  & { viewer: (
+    { __typename?: 'User' }
+    & Pick<User, 'login'>
+  ) }
+);
