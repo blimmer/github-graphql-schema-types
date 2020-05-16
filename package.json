@@ -1,0 +1,26 @@
+{
+  "name": "github-graphql-schema-types",
+  "version": "0.0.1-alpha.1",
+  "description": "Generated types for use with Github's GraphQL Schema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blimmer/github-graphql-schema-types.git"
+  },
+  "author": {
+    "name": "Ben Limmer",
+    "url": "https://benlimmer.com/consulting"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blimmer/github-graphql-schema-types/issues"
+  },
+  "homepage": "https://github.com/blimmer/github-graphql-schema-types#readme",
+  "devDependencies": {
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.2"
+  }
+}
