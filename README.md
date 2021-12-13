@@ -6,7 +6,7 @@ Github GraphQL API using
 [`@octokit/graphql-schema`](https://github.com/octokit/graphql-schema).
 
 For more details, please check out the
-[companion blog post](https://benlimmer.com/2020/05/16/github-graphql-schema-types/)
+[companion blog post](https://benlimmer.com/2020/05/16/adding-typescript-types-github-graphql-api/)
 for an explanation and walkthrough.
 
 ## Author
