@@ -32762,6 +32762,13 @@ export const AddStar = gql`
   }
 }
     `;
+export const GetRepoId = gql`
+    query GetRepoId($owner: String!, $name: String!) {
+  repository(owner: $owner, name: $name) {
+    id
+  }
+}
+    `;
 export const WhoAmI = gql`
     query WhoAmI {
   viewer {
@@ -32775,6 +32782,14 @@ export type AddStarMutationVariables = Exact<{
 
 
 export type AddStarMutation = { __typename?: 'Mutation', addStar?: { __typename?: 'AddStarPayload', starrable?: { __typename?: 'Gist', stargazers: { __typename?: 'StargazerConnection', totalCount: number } } | { __typename?: 'Repository', stargazers: { __typename?: 'StargazerConnection', totalCount: number } } | { __typename?: 'Topic', stargazers: { __typename?: 'StargazerConnection', totalCount: number } } | null } | null };
+
+export type GetRepoIdQueryVariables = Exact<{
+  owner: Scalars['String'];
+  name: Scalars['String'];
+}>;
+
+
+export type GetRepoIdQuery = { __typename?: 'Query', repository?: { __typename?: 'Repository', id: string } | null };
 
 export type WhoAmIQueryVariables = Exact<{ [key: string]: never; }>;
 
