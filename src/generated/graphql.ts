@@ -32751,6 +32751,17 @@ export type Resolvers<ContextType = any> = {
 
 
 
+export const AddStar = gql`
+    mutation AddStar($starrableId: ID!) {
+  addStar(input: {starrableId: $starrableId}) {
+    starrable {
+      stargazers {
+        totalCount
+      }
+    }
+  }
+}
+    `;
 export const WhoAmI = gql`
     query WhoAmI {
   viewer {
@@ -32758,6 +32769,13 @@ export const WhoAmI = gql`
   }
 }
     `;
+export type AddStarMutationVariables = Exact<{
+  starrableId: Scalars['ID'];
+}>;
+
+
+export type AddStarMutation = { __typename?: 'Mutation', addStar?: { __typename?: 'AddStarPayload', starrable?: { __typename?: 'Gist', stargazers: { __typename?: 'StargazerConnection', totalCount: number } } | { __typename?: 'Repository', stargazers: { __typename?: 'StargazerConnection', totalCount: number } } | { __typename?: 'Topic', stargazers: { __typename?: 'StargazerConnection', totalCount: number } } | null } | null };
+
 export type WhoAmIQueryVariables = Exact<{ [key: string]: never; }>;
 
 
