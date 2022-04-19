@@ -1,0 +1,33 @@
+{
+  "name": "github-graphql-schema-types-upgrade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.yml"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blimmer/github-graphql-schema-types.git"
+  },
+  "keywords": [],
+  "author": "Ben Limmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blimmer/github-graphql-schema-types/issues"
+  },
+  "homepage": "https://github.com/blimmer/github-graphql-schema-types#readme",
+  "dependencies": {
+    "graphql": "^16.3.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.6.2",
+    "@octokit/graphql-schema": "^10.73.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "@graphql-codegen/typescript-resolvers": "2.6.1",
+    "@graphql-codegen/typescript-document-nodes": "2.2.8",
+    "@graphql-codegen/typescript": "2.4.8"
+  }
+}
