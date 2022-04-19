@@ -32749,3 +32749,16 @@ export type Resolvers<ContextType = any> = {
   X509Certificate?: GraphQLScalarType;
 };
 
+
+
+export const WhoAmI = gql`
+    query WhoAmI {
+  viewer {
+    login
+  }
+}
+    `;
+export type WhoAmIQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type WhoAmIQuery = { __typename?: 'Query', viewer: { __typename?: 'User', login: string } };
