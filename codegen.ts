@@ -1,0 +1,14 @@
+import type { CodegenConfig } from "@graphql-codegen/cli";
+
+const config: CodegenConfig = {
+  overwrite: true,
+  schema: "src/generated/github-schema-loader.ts",
+  generates: {
+    "src/generated/graphql.ts": {
+      plugins: ["typescript", "typescript-resolvers", "typescript-document-nodes"],
+    },
+  },
+  require: ["ts-node/register"],
+};
+
+export default config;

@@ -1,0 +1,25 @@
+{
+  "name": "github-graphql-schema-types",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^16.7.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "4.0.1",
+    "@octokit/graphql-schema": "^14.20.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "@graphql-codegen/typescript": "4.0.1",
+    "@graphql-codegen/typescript-resolvers": "4.0.1",
+    "@graphql-codegen/typescript-document-nodes": "4.0.1"
+  }
+}
